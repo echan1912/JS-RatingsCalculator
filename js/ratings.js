@@ -4,8 +4,8 @@ const collect_ratings = () => {
     const elements = document.querySelectorAll('.rating');
     elements.forEach(element => {
         rating = parseInt(element.id.replace('star', ''));
-        ratings.sum += parseInt(element.value);
-        parseInt(element.value)*ratings.sum;
+        ratings.sum += parseInt(element.value*rating);
+        
     });
     if (ratings.sum !== 0) {
         ratings.average = ratings.sum/ratings.count;
